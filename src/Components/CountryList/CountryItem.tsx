@@ -5,10 +5,12 @@ interface Props {
     onClick: MouseEventHandler;
 }
 
-const CountryItem: React.FC<Props> = ({name, onClick}) => {
-    return (
-        <li onClick={onClick}><p>{name}</p></li>
-    );
-};
+const CountryItem: React.FC<Props> = React.memo(({name, onClick}) => {
+            return (
+                <li onClick={onClick}><p>{name}</p></li>
+            );
+        }
+    )
+;
 
 export default CountryItem;

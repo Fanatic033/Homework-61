@@ -4,3 +4,6 @@
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
+.list-main{
+  flex-basis: 30%;
+}

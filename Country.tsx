@@ -10,8 +10,7 @@ const Country = () => {
     return (
         <>
             <CountryList onSelectedCountry={handleSelectCountry}/>
-            <div>
-                {/*<CountryInfo id={selectedCountry}/>*/}
+            <div className={'country-info'}>
                 {selectedCountry && <CountryInfo id={selectedCountry}/>}
             </div>
         </>

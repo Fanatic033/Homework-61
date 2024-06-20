@@ -16,11 +16,13 @@ const CountryList: React.FC<Props> = ({onSelectedCountry}) => {
         const response = await axios.get(ALLCOUNTRY_URL)
         setCountries(response.data)
     }, [])
+
+
     useEffect(() => {
         void axiosCountries()
-    }, [])
+    }, [axiosCountries])
     return (
-        <div>
+        <div className={'list-main'}>
             <h2>Country List</h2>
             <ul className="countryList">
                 {countries.map((country) => (
