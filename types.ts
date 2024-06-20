@@ -7,7 +7,7 @@ export interface Countries {
 export interface CountryInfoType {
     name: string;
     capital: string;
-    borders: string;
+    borders: Countries[];
     flag: string;
     population: number
 }
