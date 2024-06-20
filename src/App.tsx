@@ -1,5 +1,5 @@
 import './App.css'
-import Country from "./Components/Country/Country.tsx";
+import Country from "../Country.tsx";
 
 const App = () => {
     return (

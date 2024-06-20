@@ -4,7 +4,7 @@ export interface Countries {
 }
 
 
-export interface CountryInfo {
+export interface CountryInfoType {
     name: string;
     capital: string;
     borders: string;
