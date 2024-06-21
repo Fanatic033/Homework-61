@@ -17,8 +17,7 @@ const CountryInfo: React.FC<Props> = ({id}) => {
       if (id) {
         const {data} = await axios.get(ONECOUNTRY_URL + id);
         if (!data.borders) {
-          alert('У Страны нет соседей');
-          console.error('У Страны нет соседей');
+       data.borders = []
         }
         const bordersPromises = data.borders.map((border: string) => axios.get(ONECOUNTRY_URL + border));
         const bordersResponses = await Promise.all(bordersPromises);
@@ -50,7 +49,7 @@ const CountryInfo: React.FC<Props> = ({id}) => {
       </div>
       <p>
         Borders:{' '}
-        {info.borders.map((border) => border.name).join(', ')}
+        {info.borders.length > 0 ? info.borders.map((border) => border.name).join(', ') : 'Нет соседних стран'}
       </p>
     </>
   );
